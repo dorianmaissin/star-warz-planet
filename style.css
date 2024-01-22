@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+
+@font-face {
+    font-family:sterilict ;
+    src: url(Sterilict-L3aen.ttf);
+}
+
+@font-face {
+    font-family:ature;
+    src: url(Atures500PersonalUseOnly-GD6D.ttf);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.background{
+    background-image: url(./img/tatouine3.jpeg);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 0;
+}
+
+.background::after{
+    content: "";
+    background-color: rgba(0, 0, 0, 0.521);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.planet-attribute{
+    width: 40%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.837);
+}
+
+h1{
+    padding: 10%;
+    font-size: 6rem;
+    color: white;
+    font-weight: 300;
+    letter-spacing: 2px;
+    font-family: sterilict;
+}
+
+.arrow{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 10%;
+    color: white;
+    font-size: 2rem;
+    display: flex;
+    justify-content: space-between;
+    width: 80px;
+}
+
+.fa-arrow-left{
+    cursor: pointer;
+}
+
+.fa-arrow-right{
+    cursor: pointer;
+}
+
+.planet-attribute{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    color: white;
+    font-size: 1.4rem;
+}
+
+.attribute-container {
+    padding-left: 10%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+strong{
+    font-family: sterilict;
+}
+
+.attribute{
+    font-family: ature;
+    margin-left: 10px;
+}
