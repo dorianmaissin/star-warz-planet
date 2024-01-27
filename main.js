@@ -30,10 +30,9 @@ const arrowLeft = document.getElementById("arrow-left");
 const arrowRight = document.getElementById("arrow-right");
 const residentBox =document.getElementById('resident');
 const loaderTwo = document.getElementById('loader-2')
-
 let planetUrlArray = [];
-let residentArray = []
-loader.hidden = false;
+let residentArray = [];
+
 
 const promise = async () => {    
     for (const url of planetUrl) {
@@ -43,7 +42,6 @@ const promise = async () => {
         planetUrlArray.push(jsonData);    
         } 
 };
-
 
 const planetResidentUrl = async () => {
     loaderTwo.hidden = false
@@ -157,12 +155,14 @@ arrowRight.addEventListener('click',() => {
 
 arrowLeft.addEventListener('click', () => {
     indexOfPlanetUrl--;
-    console.log(indexOfPlanetUrl)
+  
     if (indexOfPlanetUrl < 0) {
         indexOfPlanetUrl = 4;  // Set it to the last index
     }
+      console.log(indexOfPlanetUrl)
     changeBackground(indexOfPlanetUrl);
     planetUrlTextContent(indexOfPlanetUrl);
+    planetResidentUrl(indexOfPlanetUrl);
 });
 
 
